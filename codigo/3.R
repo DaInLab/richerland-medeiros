@@ -1,5 +1,7 @@
-if (!("writexl") %in% installed.packages()) 
-  install.packages("writexl")
+list.of.packages <- c("ggplot2", "writexl")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+library(ggplot2)
 library(writexl)
 
 child_count <- c(0, 1, 2, 3, 4, 5, 6)

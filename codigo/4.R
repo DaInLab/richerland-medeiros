@@ -3,8 +3,6 @@ if (!("readxl") %in% installed.packages())
 library(readxl)
 
 ds = read_excel(file.path(getwd(), "dados/exercicio4.xls"), skip = 1, col_names = "salaries", col_types = c("numeric"))
-d = ds$salaries
-
 freq_table = table(ds$salaries)
 
 
