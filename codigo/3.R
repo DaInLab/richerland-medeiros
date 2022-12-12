@@ -16,10 +16,35 @@ family_median = max / 2
 median_ = 2
 fashion_ = 2
 
-key <- c("median", "fashion")
-value <- c(median_, fashion_)
-barplot(value, main="Median and Fashion", xlab="Ratio", ylab="Child Count", names.arg = key, beside=TRUE, ylim=range(pretty(c(0, value))), cex.names = 0.9, xaxs = "i", col = c("red", "blue"))
 
+csx <- accumulated_frequency$Families
+plot(x = data$Childreen,         # Plot of cumsum vector
+     y = csx,
+     main = "Cumulative Frequency Distribution",
+     xlab = "Length of Example Vector",
+     ylab = "Cumulative Sum")
+
+rect(0, 60, 11, 0,              # Modify background color
+     border = "black",
+     col = "grey92")
+
+abline(v = data$Childreen,       # Add vertical lines to plot
+       col = "white",
+       lty = "dashed")
+
+abline(h = csx,                 # Add horizontal lines to plot
+       col = "white",
+       lty = "dashed")
+
+points(x = data$Childreen,       # Add line to plot
+       y = csx,
+       col = "#1b98e0",
+       type = "l")
+
+points(x = data$Childreen,       # Add points to plot
+       y = csx,
+       col = "#1b98e0",
+       pch = 16)
 
 fashion_
 median_
