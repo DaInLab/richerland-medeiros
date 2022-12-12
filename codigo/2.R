@@ -16,8 +16,8 @@ breaks = seq(inferior_lim,upper_lim,h)
 freq_dist_table = table(cut(ds$house_count,breaks = breaks, right = FALSE))
 average =mean(ds$house_count)
 median =median(ds$house_count)
-modal = unique(ds$house_count) 
-fashion = modal[which.max(tabulate(match(ds$house_count, modal)))]
+distintive = unique(ds$house_count) 
+fashion = distintive[which.max(tabulate(match(ds$house_count, distintive)))]
 quartile = round(quantile(ds$house_count, prob=c(.25,.5,.75)),2)
 variance = var(ds$house_count)
 standard_deviation = sd(ds$house_count)
