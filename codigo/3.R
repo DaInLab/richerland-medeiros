@@ -2,8 +2,6 @@ if (!("writexl") %in% installed.packages())
   install.packages("writexl")
 library(writexl)
 
-if (!("readxl") %in% installed.packages()) install.packages("readxl")
-
 child_count <- c(0, 1, 2, 3, 4, 5, 6)
 families <- c(17, 20, 28, 19, 7, 4, 5)
 data <- data.frame("Childreen" = child_count, "Families" = families)
