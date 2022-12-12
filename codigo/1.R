@@ -10,7 +10,7 @@ standard_deviation = round(sd(ds$interest_rate),6)
 variance = round(var(ds$interest_rate),6)
 min_value = round(min(ds$interest_rate),2)
 max_value = round(max(ds$interest_rate),2)
-quartiz = round(quantile(ds$interest_rate, prob=c(.25,.5,.75)),2)
+quartiles = round(quantile(ds$interest_rate, prob=c(.25,.5,.75)),2)
 
 
 average
@@ -19,8 +19,8 @@ standard_deviation
 variance
 min_value
 max_value
-quartiz[1]
-quartiz[3]
+quartiles[1]
+quartiles[3]
 
 
 
